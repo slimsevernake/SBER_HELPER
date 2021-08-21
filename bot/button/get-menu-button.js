@@ -1,6 +1,6 @@
 const { Markup } = require('telegraf')
 
-function getMenuButton() {
+const getMenuButton = () => {
     return Markup.inlineKeyboard([
         [
             Markup.button.callback('Подготовка к выходу', 'Preparing to leave')
