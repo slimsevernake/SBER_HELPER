@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "npm run build && node server.js",
+    "build": "cd client && npm run build"
   },
   "engines": {
     "node": "14.x"

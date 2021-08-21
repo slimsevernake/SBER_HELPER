@@ -2,7 +2,7 @@ const express = require('express');
 const session = require('express-session');
 const cors = require('cors');
 require('dotenv').config();
-
+const path = require('path');
 const sber_bot = require('./bot/settings');
 const app = express();
 
@@ -27,7 +27,10 @@ app.use(
 
 // app.use(session(sessionConfig));
 
-// app.use('/user', userRouter);
+app.use('/', express.static(path.join(__dirname, 'client', 'build')))
+app.use('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+})
 
 app.listen(process.env.PORT, () => {
   console.log('Server Start at PORT: ', process.env.PORT);
