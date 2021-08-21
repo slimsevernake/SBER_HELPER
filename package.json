@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "npm run build && node server.js",
-    "build": "npm run build --prefix client"
+    "dev": "npm run build --prefix client && node server.js",
   },
   "engines": {
     "node": "14.x"
