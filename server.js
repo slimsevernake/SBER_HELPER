@@ -28,7 +28,7 @@ app.use(
 // app.use(session(sessionConfig));
 
 app.use('/', express.static(path.join(__dirname, 'client', 'dist')))
-app.use('/user', (req, res) => {
+app.use('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html'))
 })
 
