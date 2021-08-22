@@ -1,7 +1,6 @@
 const { getMenuButton, getFaqButton, getFavoritsButton, getWhatBotCanDoButton } = require('../button')
 
 const getButtonForClickMenu = (text) => {
-    console.log(text)
     switch (text) {
         case 'Меню':
             return getMenuButton()
